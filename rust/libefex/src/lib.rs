@@ -844,6 +844,10 @@ pub enum FesDataType {
     Ext4Ubifs,
     /// FLASH operation tag
     Flash,
+    /// Physical flash upload path (U-Boot's FLASH_BOOT0 tag)
+    FlashBoot0,
+    /// Physical boot1 upload path
+    FlashBoot1,
 }
 
 /// Convert Rust FES data type to C FES data type
@@ -858,6 +862,8 @@ fn rust_fes_data_type_to_c(data_type: FesDataType) -> sunxi_fes_data_type_t {
         FesDataType::FullImgSize => sunxi_fes_data_type_t::SUNXI_EFEX_FULLIMG_SIZE_TAG,
         FesDataType::Ext4Ubifs => sunxi_fes_data_type_t::SUNXI_EFEX_EXT4_UBIFS_TAG,
         FesDataType::Flash => sunxi_fes_data_type_t::SUNXI_EFEX_FLASH_TAG,
+        FesDataType::FlashBoot0 => sunxi_fes_data_type_t::SUNXI_EFEX_FLASH_BOOT0_TAG,
+        FesDataType::FlashBoot1 => sunxi_fes_data_type_t::SUNXI_EFEX_FLASH_BOOT1_TAG,
     }
 }
 

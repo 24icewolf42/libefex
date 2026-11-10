@@ -260,6 +260,8 @@ pub enum sunxi_fes_data_type_t {
     SUNXI_EFEX_FULLIMG_SIZE_TAG = 0x7f10, // Full image size tag
     SUNXI_EFEX_EXT4_UBIFS_TAG = 0x7ff0,   // EXT4/UBIFS file system tag
     SUNXI_EFEX_FLASH_TAG = 0x8000,        // FLASH operation tag
+    SUNXI_EFEX_FLASH_BOOT0_TAG = 0x8001,  // Physical flash read path
+    SUNXI_EFEX_FLASH_BOOT1_TAG = 0x8002,  // Physical boot1 read path
     // Data type mask
     SUNXI_EFEX_DATA_TYPE_MASK = 0x7fff, // Data type mask
 
